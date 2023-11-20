@@ -12,6 +12,8 @@ header {
     color: #fff;
     padding: 20px;
     text-align: center;
+    /* height: 400px;
+    background-image: url("header.jpg"); */
 }
 
 nav {
@@ -53,6 +55,7 @@ h2 {
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
+    overflow: hidden;
 }
 
 .event-card:hover {
@@ -65,8 +68,12 @@ h2 {
 
 .event-card p {
     color: #666;
+    text-wrap:wrap;
 }
-
+.event-card img {
+    width: 250px;
+    height: 170px;
+}
 .event-card button {
     background-color: #333;
     color: #fff;
@@ -75,6 +82,8 @@ h2 {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
+    
+
 }
 
 .event-card button:hover {
@@ -121,6 +130,7 @@ button:hover {
     font-size: 24px;
     cursor: pointer;
     margin: auto 10px;
+    display: inline-block;
 }
 
 .slider-arrow:hover {
@@ -148,5 +158,6 @@ button:hover {
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-    display: inline-block; /* Display event cards in one line */
+    display: inline-block; 
 }
+

@@ -26,30 +26,35 @@
         </p>
   
         <div class="featured-events">
-          <div class="slider-arrow" onclick="prevSlide()">&#10094;</div>
+          <!-- <div class="slider-arrow" onclick="prevSlide()">&#10094;</div> -->
           <div class="events-container">
             <div class="event-card">
-              <img src="https://via.placeholder.com/300" alt="Event 1 Image" />
-              <h3>Event 1</h3>
-              <p>Description of Event 1.</p>
+              <img src="corporate.jpg" alt="Event 1 Image" />
+              <h3>Corporate Event</h3>
+              <p>Elevate your corporate events with our expert planning and seamless execution.</p>
               <button>Learn More</button>
             </div>
             <div class="event-card">
-              <img src="https://via.placeholder.com/300" alt="Event 2 Image" />
-              <h3>Event 2</h3>
-              <p>Description of Event 2.</p>
+              <img src="wedding.jpg" alt="Event 2 Image" />
+              <h3>Wedding</h3>
+              <p>Celebrate the most special day of your life with our exquisite wedding planning services.</p>
               <button>Learn More</button>
             </div>
             <div class="event-card">
-              <img src="https://via.placeholder.com/300" alt="Event 3 Image" />
-              <h3>Event 3</h3>
-              <p>Description of Event 3.</p>
+              <img src="birthday.jpg" alt="Event 3 Image" />
+              <h3>Birthday</h3>
+              <p>Make your birthday unforgettable with our tailored birthday party arrangements.</p>
               <button>Learn More</button>
             </div>
-            <!-- Add more event cards as needed -->
+            <div class="event-card">
+              <img src="baby-shower.jpeg" alt="Event 3 Image" />
+              <h3>Baby Shower</h3>
+              <p>Plan and manage your perfect baby shower with our easy-to-use tools and delightful designs.</p>
+              <button>Learn More</button>
+            </div>
+          
           </div>
-          `
-          <div class="slider-arrow" onclick="nextSlide()">&#10095;</div>
+          <!-- <div class="slider-arrow" onclick="nextSlide()">&#10095;</div> -->
         </div>
       </section>
 
@@ -95,13 +100,14 @@
       function showSlides() {
         const container = document.querySelector(".events-container");
         const cards = document.querySelectorAll(".event-card");
+        const cardWidth = cards[0].offsetWidth + 40;
         if (slideIndex >= cards.length) {
           slideIndex = 0;
         }
         if (slideIndex < 0) {
           slideIndex = cards.length - 1;
         }
-        const translateValue = -slideIndex * (cards[0].offsetWidth + 40); // 40 is the total margin (20px on each side)
+        const translateValue = -slideIndex * cardWidth;
         container.style.transform = `translateX(${translateValue}px)`;
       }
 
