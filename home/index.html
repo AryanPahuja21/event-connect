@@ -12,11 +12,18 @@
     </header>
 
     <nav>
+      <div>
       <a href="#">Home</a>
       <a href="/about">About Us</a>
       <a href="/events">Events</a>
       <a href="/contact">Contact</a>
+      </div>
+      <div class="auth-buttons">
+        <button onclick="openLoginModal()">Login</button>
+        <button onclick="openSignupModal()">Signup</button>
+      </div>
     </nav>
+
 
     <section>
         <h2>Discover Exciting Events with EventConnect</h2>
@@ -91,37 +98,8 @@
         <button type="submit">Send Message</button>
       </form>
     </section>
+    
+    <script src="script.js"></script>
 
-
-
-    <script>
-      let slideIndex = 0;
-
-      function showSlides() {
-        const container = document.querySelector(".events-container");
-        const cards = document.querySelectorAll(".event-card");
-        const cardWidth = cards[0].offsetWidth + 40;
-        if (slideIndex >= cards.length) {
-          slideIndex = 0;
-        }
-        if (slideIndex < 0) {
-          slideIndex = cards.length - 1;
-        }
-        const translateValue = -slideIndex * cardWidth;
-        container.style.transform = `translateX(${translateValue}px)`;
-      }
-
-      function nextSlide() {
-        slideIndex++;
-        showSlides();
-      }
-
-      function prevSlide() {
-        slideIndex--;
-        showSlides();
-      }
-
-      document.addEventListener("DOMContentLoaded", showSlides);
-    </script>
   </body>
 </html>
