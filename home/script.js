@@ -1,8 +1,8 @@
 
 function openLoginModal() {
-    alert('Open Login Modal');
-}
+    window.location.href = '../authenticate/login.html';
+ }
 
 function openSignupModal() {
-    alert('Open Signup Modal');
-}
+    window.location.href = '../authenticate/auth.html';
+ }
