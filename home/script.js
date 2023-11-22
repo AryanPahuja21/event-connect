@@ -6,3 +6,7 @@ function openLoginModal() {
 function openSignupModal() {
     window.location.href = '../authenticate/auth.html';
  }
+
+// function about() {
+//     window.location.href = '../about/about.html';
+// }
